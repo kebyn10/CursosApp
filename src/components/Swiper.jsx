@@ -7,11 +7,13 @@ import img3 from "../assets/img3.jpg";
 import img4 from "../assets/img4.jpg";
 import img5 from "../assets/img5.jpg";
 import { Box, Button, Typography } from "@mui/material";
+import { useNavigate } from 'react-router-dom';
 // import py from "../assets/pyImage.png"
 // import java from "../assets/javaIMage.png"
 
 function ImageSlider() {
   const data=[{id:"Imagen 1",img:img1},{id:"Imagen 2",img:img2},{id:"Imagen 3",img:img3},{id:"Imagen 4",img:img4},{id:"Imagen 5",img:img5}]
+  const navigate=useNavigate()
   return (
     <Box sx={{ width: "100%" }}>
       <Swiper
@@ -73,7 +75,7 @@ function ImageSlider() {
                 </Typography>
                 
                 <Box>
-                <Button variant="contained" sx={{color:"white",background:"#0969968d",borderRadius:"30px",fontWeight:"bold"}}>Empezar a estudiar</Button>
+                <Button variant="contained" onClick={()=>navigate('/cursos', { state: { from: 'home' } })} sx={{color:"white",background:"#0969968d",borderRadius:"30px",fontWeight:"bold"}}>Empezar a estudiar</Button>
                 </Box>
               </Box>
             </Box>
