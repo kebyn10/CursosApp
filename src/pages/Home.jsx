@@ -8,12 +8,15 @@ import Footer from '../components/Footer'
 const Home = () => {
   return (
    <>
-   <NavBar page={"home"}/>
+   <Box data-aos="fade-down" data-aos-duration="1000" >
+    <NavBar page={"home"}/>
    <ImageSlider/>
+   
    <Box sx={{width:"100%"}}>
    <AboutUs />
    </Box>
    <Footer />
+   </Box>
    </>
   )
 }
