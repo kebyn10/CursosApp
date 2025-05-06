@@ -1,36 +1,45 @@
 import { use, useEffect } from "react";
 import { useState } from "react";
 import { dataDBYOUTUBE } from "../dbCourse/data";
-import { Box, TextareaAutosize, Typography } from "@mui/material";
+import { Box, Paper, TextareaAutosize, Typography } from "@mui/material";
 import AccordionUsage from "../components/Acoordion";
+import jsI from "../assets/jsIMage.png"
+import pyI from "../assets/pyImage.png"
+import java from "../assets/javaIMage.png"
 
 const VideoPage = ({ data }) => {
   const [dataVideo, setDataVideo] = useState(data);
   const [video, setVideo] = useState("");
+  const [img,setImg]=useState(null)
   useEffect(() => {
+  
     switch (data) {
       case "JavaScript":
         setDataVideo(dataDBYOUTUBE.js);
         setVideo(dataDBYOUTUBE.js.videos[0].link);
+        setImg(jsI)
         break;
       case "Python":
         setDataVideo(dataDBYOUTUBE.py);
         setVideo(dataDBYOUTUBE.py.videos[0].link);
-
+        setImg(pyI)
         break;
       case "Java":
         setDataVideo(dataDBYOUTUBE.java);
         setVideo(dataDBYOUTUBE.java.videos[0].link);
+        setImg(java)
 
         break;
 
       default:
         break;
     }
-  }, []);
+  }, [data,dataVideo]);
+  
 
   return (
     <Box
+    data-aos="fade-down" data-aos-duration="1000"
       sx={{ width: "100%", height: "60%", marginTop: "70px", padding: "10px" }}
     >
       <Typography variant="h3" sx={{ color: "#094460", marginBottom: "10px" }}>
@@ -115,9 +124,102 @@ const VideoPage = ({ data }) => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            border: "1px solid green",
+            padding:"5px"
           }}
-        ></Box>
+        >
+          <Paper sx={{width:"100%",height:"100%",borderRadius:"10px",padding:"15px"}} elevation={3}>
+
+
+
+
+
+          {
+            dataVideo?.videos?.length>0 ? (dataVideo.videos.map((data,i)=>(
+                <Box sx={{width:"100%",height:"110px",display:"flex",background:data.link==video ? "#f7f7f7" : "white",padding:"3px",borderRadius:"5px",cursor:"pointer"
+                }} key={"video"+i} onClick={()=>setVideo(data.link)}>
+                  <img src={img} alt=""  style={{width:"30%",height:"80%",borderRadius:"10px",marginRight:"5px",marginTop:"10px",marginLeft:"2px"}}/>
+                  <Box sx={{display:"flex",justifyContent:"center",alignItems:"center",width:"100%",flexDirection:"column"}}>
+  
+                  <Typography sx={{marginTop:"5px",width:"100%",textAlign:"center",fontWeight:"bold"}}> {data.name}</Typography>
+                  <Typography sx={{marginTop:"5px",width:"100%",textAlign:"center"}}> {data.description}</Typography>
+                  </Box>
+                </Box>
+              ))) : null
+              
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/* 
+
+
+              <Box sx={{width:"100%",height:"110px",display:"flex",background:"#f7f7f7",padding:"3px",borderRadius:"5px",cursor:"pointer"
+              }}>
+                <img src={img} alt=""  style={{width:"30%",height:"80%",borderRadius:"10px",marginRight:"5px",marginTop:"10px",marginLeft:"2px"}}/>
+                <Box sx={{display:"flex",justifyContent:"center",alignItems:"center",width:"100%",flexDirection:"column"}}>
+
+                <Typography sx={{marginTop:"5px",width:"100%",textAlign:"center"}}> introduccion</Typography>
+                <Typography sx={{marginTop:"5px",width:"100%",textAlign:"center"}}> Aprende los conceptos basicos de js</Typography>
+                </Box>
+              </Box>
+              <Box sx={{width:"100%",height:"110px",display:"flex",background:"",padding:"3px",borderRadius:"5px",cursor:"pointer"
+              }}>
+                <img src={img} alt=""  style={{width:"30%",height:"80%",borderRadius:"10px",marginRight:"5px",marginTop:"10px",marginLeft:"2px"}}/>
+                <Box sx={{display:"flex",justifyContent:"center",alignItems:"center",width:"100%",flexDirection:"column"}}>
+
+                <Typography sx={{marginTop:"5px",width:"100%",textAlign:"center"}}> introduccion</Typography>
+                <Typography sx={{marginTop:"5px",width:"100%",textAlign:"center"}}> Aprende los conceptos basicos de js</Typography>
+                </Box>
+              </Box> */}
+
+
+
+          </Paper>
+
+        </Box>
       </Box>
     </Box>
   );
