@@ -7,6 +7,7 @@ import pyI from "../assets/pyImage.png"
 import java from "../assets/javaIMage.png"
 import { SelectCourse } from './SelectCourse'
 import VideoPage from './VideoPage'
+import SelectCourseTest from './selectCourseTest'
 
 const CoursePage = () => {
     const [course,setCourse]=useState("")
@@ -17,7 +18,7 @@ const CoursePage = () => {
 
 
         {
-            course==="" ? (<SelectCourse setCourse={(e)=>{setCourse(e)}}/>) : (<VideoPage data={course}/>)
+            course==="" ? (<SelectCourse setCourse={(e)=>{setCourse(e)}}/>) : (<SelectCourseTest data={course}/>)
         }
        
     
