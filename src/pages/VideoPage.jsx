@@ -12,12 +12,15 @@ import AccordionUsage from "../components/Acoordion";
 import jsI from "../assets/jsIMage.png";
 import pyI from "../assets/pyImage.png";
 import java from "../assets/javaIMage.png";
+import Hangman from "./Ahorcado";
 
 const VideoPage = ({ data,setSelect }) => {
   const [dataVideo, setDataVideo] = useState(data);
   const [video, setVideo] = useState("");
   const [img, setImg] = useState(null);
   const [disabled, setDisabled] = useState(true);
+  const [playGame, setPlayGame] = useState(false);
+  const [dataGame, setDataGame] = useState({});
 
   useEffect(() => {
     switch (data) {
@@ -55,7 +58,42 @@ const VideoPage = ({ data,setSelect }) => {
       }
     }
   }, [video]);
- return  (
+
+  const handlePlayGame = () => {
+    for (let i = 0; i < dataVideo.videos.length; i++) {
+      const element = dataVideo.videos[i];
+      if (element.link == video) {
+        setDataGame({...element})
+        break;
+      }
+    }
+
+  }
+  useEffect(()=>{
+    console.log('cambio');
+    
+    if (dataGame.word) {
+      setPlayGame(true);
+    }else{
+      setPlayGame(false);
+    }
+  },[dataGame])
+ 
+  return (
+    <>
+    {
+      playGame ? (<>
+      <Box
+      data-aos="fade-down"
+      data-aos-duration="1000"
+      sx={{ width: "100%", height: "60%", marginTop: "70px", padding: "10px" }}
+    >
+     {
+      dataGame ? (<Hangman correctWord={dataGame.word} dataGame={dataGame} />) : null
+     } 
+    </Box>
+      
+      </>) :  (
     <Box
       data-aos="fade-down"
       data-aos-duration="1000"
@@ -75,7 +113,17 @@ const VideoPage = ({ data,setSelect }) => {
         >
           {dataVideo.name}{" "}
         </Typography>
-        <Button
+        <Box>
+          <Button
+          variant="contained"
+          sx={{ borderRadius: "30px", background: "#094460",marginRight:"10px" }}
+          onClick={() => {
+            handlePlayGame()
+          }}
+        >
+          Jugar Ahorcado
+        </Button>  
+         <Button
           disabled={disabled}
           variant="contained"
           sx={{ borderRadius: "30px", background: "#094460" }}
@@ -84,7 +132,9 @@ const VideoPage = ({ data,setSelect }) => {
           }}
         >
           Tomar examen
-        </Button>
+        </Button>  
+        </Box>
+       
       </Box>
       <Box
         sx={{
@@ -244,6 +294,9 @@ const VideoPage = ({ data,setSelect }) => {
       </Box>
     </Box>
   ) 
+    }
+    </>
+  )  
   
  
   

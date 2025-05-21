@@ -17,7 +17,7 @@ export const SelectCourse = ({setCourse}) => {
     <Box sx={{width:"100%", height:"60%"}}>   
         <Box sx={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"end"}}>   
             <Box data-aos="fade-up" data-aos-duration="1000"    sx={{width:"100%",display:"flex",justifyContent:"center",alignItems:"center", flexDirection:"column"}}>   
-                <img style={{width:"22%"}} src={imge} alt="someone programing" />
+                <img style={{width:"20%",marginTop:""}} src={imge} alt="someone programing" />
                 <Typography sx={{fontSize:"35px",color:"#094460"}}>¡Qué esperas para empezar!</Typography>
             </Box>
 

@@ -8,45 +8,72 @@ export const dataDBYOUTUBE = {
         link: "https://www.youtube.com/embed/mpIwKBNr7_o?si=HDg7tb4BqUPtV0eo",
         name: "introduccion",
         description: "Aprende los conceptos basicos",
+        word:"programa",
+        clue:"Es un conjunto de instrucciones que le dicen a la computadora que hacer",
+        video:1
       },
       {
         link: "https://www.youtube.com/embed/fH4rfaBkgCc?si=kT_5wy_djU35jMvM",
         name: "Como instalar visual studio code",
         description: "Aprende como puedes descargar un editor de texto",
+        word:"Editor de codigo",
+        clue:"Es un programa que permite escribir y editar código fuente",
+        video:2
       },
       {
         link: "https://www.youtube.com/embed/bQciY0LFQvo?si=83OSaM4jy8KBItmy",
         name: "Primer codigo",
         description: "Escribir mi primer codigo en visual",
+        word:"codigo",
+        clue:"Es un conjunto de instrucciones escritas en un lenguaje de programación",
+        video:3
       },
       {
         link: "https://www.youtube.com/embed/cXnmaE0FDeE?si=OhKvnR_wlLv8bVS_",
         name: "Tipos de datos",
         description: "Aprender los tipos de datos en js",
+        word:"boolean",
+        clue:"Es un tipo de dato que puede ser verdadero o falso",
+        video:4
       },
       {
         link: "https://www.youtube.com/embed/bhf03vBQUc8?si=sLkA3RlggxnnzYW-",
         name: "Concatenar",
         description: "Aprender a concatenar",
+        word:"concatenar",
+        clue:"Es la operación de unir dos o más cadenas de texto",
+        video:5
       },
       {
         link: "https://www.youtube.com/embed/ftxLpLPzbzg?si=eMJNqXhkz3rPAarm",
         name: "Comentarios",
         description: "Aprender a poner comentarios",
+        word:"comentarios",
+        clue:"Es una anotación en el código que no afecta su ejecución",
+        video:6
       },
        {
         link: "https://www.youtube.com/embed/TfAvuJA7sgE?si=Ap8DK26GmbXZVtla",
         name: "Constantes",
         description: "Aprender a usar constantes",
+        word:"constantes",
+        clue:"Es un valor que no puede cambiar durante la ejecución del programa",
+        video:7
       }, {
         link: "https://www.youtube.com/embed/JLiWZETdqTI?si=CGBXSqumvl3Nf5YP",
         name: "Operadores aritméticos",
         description: "Aprender a usar operadores aritméticos",
+        word:"aritmeticos",
+        clue:"Son símbolos que indican operaciones matemáticas",
+        video:8
       },
       {
         link:"https://www.youtube.com/embed/OD2PYOiK0wo?si=DlytUd8H4nAktj_N",
         name:"Operadores de comparación",
-        description:"Aprender a usar operadores de comparación"
+        description:"Aprender a usar operadores de comparación",
+        word:"comparacion",
+        clue:"Son símbolos que comparan dos valores y devuelven un booleano",
+        video:9
       }
     ],
   },
@@ -59,41 +86,65 @@ export const dataDBYOUTUBE = {
         link: "https://www.youtube.com/embed/DAdRO6ByBoU?si=-2KQ4sF3azV8PjVN",
         name: "introduccion",
         description: "Aprender a instalar python",
+        word:"instalacion",
+        clue:"Es el proceso de poner un programa en tu computadora",
+        video:1
       },
       {
         link: "https://www.youtube.com/embed/UzHFkEdnRuc?si=gYYyAHe5Rb6kAKog",
         name: "Ejecución y compilación",
         description: "Ejecutar python en tu pc",
+        word:"ejecucion",
+        clue:"Es el proceso de correr un programa en la computadora",
+        video:2
       },
       {
         link: "https://www.youtube.com/embed/w8VZxo1TlnU?si=6Zhb4NRlmZeDDQbs",
         name: "Variables en python",
         description: "Aprende a crear variables en py",
+        word:"variables",
+        clue:"Es un espacio en memoria que almacena un valor",
+        video:3
       },
       {
         link: "https://www.youtube.com/embed/6yBL1mcd7iY?si=BeouYQJ-POvu5I6z",
         name: "Manipulación de cadenas de caracteres",
         description: "Aprende a manipular cadenas de texto",
+        word:"cadenas de texto",
+        clue:"Es una secuencia de caracteres encerrados entre comillas",
+        video:4
       },
       {
         link: "https://www.youtube.com/embed/1CDE1pdVDGw?si=r1auXifLsmsYFaYO",
         name: "Palabras reservadas",
         description: "aprende las palabras reservadas",
+        word:"palabras reservadas",
+        clue:"Son palabras que tienen un significado especial en el lenguaje",
+        video:5
       },
       {
         link: "https://www.youtube.com/embed/6sOEpHItJHs?si=1hI74b3gaUizRTdD",
         name: "Operedores aritmeticos",
         description: "Aprende operedores aritmeticos",
+        word:"aritmeticos",
+        clue:"Son símbolos que indican operaciones matemáticas",
+        video:6
       },
       {
         link: "https://www.youtube.com/embed/xptKv7yhfSA?si=qZJdvmdWSPkTMz1K",
         name: "Comentarios",
         description: "Aprende a usar comentarios",
+        word:"comentarios",
+        clue:"Es una anotación en el código que no afecta su ejecución",
+        video:7
       },
       {
         link: "https://www.youtube.com/embed/EaWsOcc7R2M?si=81yjzEQRo4q1JSGM",
         name: "Tipos de datos",
         description: "Aprende los tipos de datos",
+        word:"tipos de datos",
+        clue:"Es la clasificación de los valores que pueden ser almacenados en una variable",
+        video:8
       }
       
     ],
@@ -106,37 +157,57 @@ export const dataDBYOUTUBE = {
       {
         link: "https://www.youtube.com/embed/L1oMLsiMusQ?si=DnJqVxDIE5yYqnQY",
         name: "introduccion",
-        description: "Aprender a instalar java jdk"
+        description: "Aprender a instalar java jdk",
+        word:"jdk",
+        clue:"Es el kit de desarrollo de Java, necesario para compilar y ejecutar programas en Java",
+        video:1
       },
       {
         link:"https://www.youtube.com/embed/Cs5ymoNkrX8?si=pkMQRlZu3DDNpLPo",
         name:"Indentado, Compilación",
-        description:"Aprender a compilar y ejecutar un programa en java"
+        description:"Aprender a compilar y ejecutar un programa en java",
+        word:"indentado",
+        clue:"Es la forma de organizar el código para que sea legible y estructurado",
+        video:2
       },
       {
         link:"https://www.youtube.com/embed/Cdr4wTz0Wro?si=Y4yI762fxYSM9kwH",
         name:"Errores sintácticos y lógicos",
-        description:"Aprender a identificar errores en java"
+        description:"Aprender a identificar errores en java",
+        word:"errores",
+        clue:"Son fallos en el código que impiden su correcta ejecución",
+        video:3
       },
       {
         link:"https://www.youtube.com/embed/vJTeIJx_Kn0?si=492mQ6PklM1MCMZn",
         name:"Variables y tipos de datos",
-        description:"Aprender a crear variables y tipos de datos en java"
+        description:"Aprender a crear variables y tipos de datos en java",
+        word:"variables",
+        clue:"Es un espacio en memoria que almacena un valor",
+        video:4
       },
       {
         link:"https://www.youtube.com/embed/Ifg_JzetpU4?si=shzLnicebkjpx862",
         name:"Operadores aritméticos",
-        description:"Aprender a usar operadores aritméticos en java"
+        description:"Aprender a usar operadores aritméticos en java",
+        word:"aritmeticos",
+        clue:"Son símbolos que indican operaciones matemáticas",
+        video:5
       },
       {
         link:"https://www.youtube.com/embed/pwVppK3RgyI?si=5PHjib_M9lmuj01s",
         name:"Operadores de comparación",
-        description:"Aprender a usar operadores de comparación en java if else"
+        description:"Aprender a usar operadores de comparación en java if else",
+        word:"comparacion",
+        video:6
       },
       {
         link:"https://www.youtube.com/embed/pPG66_BZ8-c?si=r54wCGht6VlLiO8O",
         name:"estructuras de control anidadas",
-        description:"Aprender a usar estructuras de control anidadas en java"
+        description:"Aprender a usar estructuras de control anidadas en java",
+        word:"estructuras de control",
+        clue:"Son instrucciones que controlan el flujo de ejecución del programa",
+        video:7
       }
     ],
   },
