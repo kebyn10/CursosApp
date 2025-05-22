@@ -1,13 +1,9 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import { NavBar } from '../components/NavBar'
-import { Box, Typography } from '@mui/material'
-import imge from "../assets/programin.png"
-import jsI from "../assets/jsIMage.png"
-import pyI from "../assets/pyImage.png"
-import java from "../assets/javaIMage.png"
+import { Box } from '@mui/material'
 import { SelectCourse } from './SelectCourse'
 import VideoPage from './VideoPage'
-import SelectCourseTest from './selectCourseTest'
+import SelectCourseTest from './SelectCourseTest'
 
 const CoursePage = () => {
     const [course,setCourse]=useState("")
